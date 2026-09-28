@@ -1,6 +1,6 @@
 # Terraform Provider Configuration: google
 provider "google" {
-  project = "gcplearn9"
+  project = "project-bde3d8d6-f5a0-49e5-964"
   region = "us-central1"
 }
 
