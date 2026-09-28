@@ -1,4 +1,4 @@
-gcp_project     = "gcplearn9"
+gcp_project     = "My First Project"
 gcp_region1     = "us-central1"
 machine_type    = "e2-medium"
 environment     = "dev"
