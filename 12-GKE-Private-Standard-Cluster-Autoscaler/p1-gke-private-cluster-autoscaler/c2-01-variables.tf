@@ -3,7 +3,7 @@
 variable "gcp_project" {
   description = "Project in which GCP Resources to be created"
   type = string
-  default = "kdaida123"
+  default = "project-bde3d8d6-f5a0-49e5-964"
 }
 
 # GCP Region
