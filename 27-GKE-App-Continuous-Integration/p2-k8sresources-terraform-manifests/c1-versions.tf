@@ -12,7 +12,7 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "artifact-registry-demo/k8s-myapp1"    
   }  
 }

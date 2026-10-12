@@ -99,7 +99,7 @@ git push
 - **Only select repositories:** stacksimplify/terraform-gcp-gke-app-devops
 - Click on **Install**
 - Login to Google Cloud and Click on **Authorize Google Cloud Build**
-- **Select project in GCP:** gcplearn9
+- **Select project in GCP:** project-bde3d8d6-f5a0-49e5-964
 - IF ALREADY CONFIGURED, PLEASE IGNORE THIS STEP
 
 ## Step-07: GCP Cloud Build: Create HOST Connection [IGNORE - IF ALREADY CONFIGURED]
@@ -162,7 +162,7 @@ git push
 image = "us-central1-docker.pkg.dev/GOOGLE_CLOUD_PROJECT/myapps-repository/myapp1:COMMIT_SHA"
 
 # Replace GOOGLE_CLOUD_PROJECT,  COMMIT_SHA
-image = "us-central1-docker.pkg.dev/gcplearn9/myapps-repository/myapp1:xxxxx"
+image = "us-central1-docker.pkg.dev/project-bde3d8d6-f5a0-49e5-964/myapps-repository/myapp1:xxxxx"
 ```
 ### Step-11-02: Execute Terraform Commands and Verify
 ```t
@@ -221,7 +221,7 @@ git push
 image = "us-central1-docker.pkg.dev/GOOGLE_CLOUD_PROJECT/myapps-repository/myapp1:COMMIT_SHA"
 
 # Replace GOOGLE_CLOUD_PROJECT,  COMMIT_SHA
-image = "us-central1-docker.pkg.dev/gcplearn9/myapps-repository/myapp1:xxxxx"
+image = "us-central1-docker.pkg.dev/project-bde3d8d6-f5a0-49e5-964/myapps-repository/myapp1:xxxxx"
 ```
 ### Step-13-02: Execute Terraform Commands and Verify
 ```t

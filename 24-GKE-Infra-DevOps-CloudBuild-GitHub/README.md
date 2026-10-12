@@ -18,7 +18,7 @@ description: Learn to implement DevOps for GKE Terraform Code in GCP
 ### Step-02-02: Dev environment in Environments Folder: dev
 1. Copy the **terraform-manifests folder** from previous demo (Section: 23-GKE-Custom-Terraform-Modules) and rename folder to dev (envirionments/dev)
 2. **envirionments/dev/c1-versions.tf:** ensure we have the backend block configured as **prefix = "dev/gke-cluster"**
-3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke"`
+3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops`
 ```hcl
 # Terraform Settings Block
 terraform {
@@ -30,14 +30,14 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster"    
   }
 }
 ```
 3. **terraform.tfvars:** Ensure environment is **environment     = "dev"**
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"
@@ -50,7 +50,7 @@ master_ip_range  = "10.3.0.0/28"
 ### Step-02-03: Prod environment in Environments Folder: prod
 1. Copy the **terraform-manifests folder** from previous demo (Section: 23-GKE-Custom-Terraform-Modules) and rename folder to prod (envirionments/prod)
 2. **envirionments/prod/c1-versions.tf:** ensure we have the backend block configured as **prefix = "prod/gke-cluster"**
-3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke"`
+3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops`
 ```hcl
 # Terraform Settings Block
 terraform {
@@ -62,14 +62,14 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "prod/gke-cluster"    
   }
 }
 ```
 3. **terraform.tfvars:** Ensure environment is **environment     = "prod"**
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region     = "us-central1"
 environment     = "prod"
 business_divsion = "hr"
@@ -251,7 +251,7 @@ git push
 - **Only select repositories:** stacksimplify/terraform-gcp-gke-infra-devops
 - Click on **Install**
 - Login to Google Cloud and Click on **Authorize Google Cloud Build**
-- **Select project in GCP:** gcplearn9
+- **Select project in GCP:** project-bde3d8d6-f5a0-49e5-964
 
 
 ## Step-07: GCP Cloud Build: Create HOST Connection
@@ -299,12 +299,12 @@ git push
 ```hcl
 # Dev Environment
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster"    
   }
 # Prod Environment
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "prod/gke-cluster"    
   } 
 ```

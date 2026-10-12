@@ -11,7 +11,7 @@ terraform {
 
 # Terraform Provider Block
 provider "google" {
-  project = "gcplearn9" # PROJECT_ID
+  project = "project-bde3d8d6-f5a0-49e5-964" # PROJECT_ID
   region = "us-central1"
 }
 

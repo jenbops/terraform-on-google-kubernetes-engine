@@ -24,7 +24,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private"    
   }
 }
@@ -177,7 +177,7 @@ cd p3-k8sresources-terraform-manifests
 
 # Update c1-versions.tf
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/k8s-demo1"    
   }  
 
@@ -186,7 +186,7 @@ cd p3-k8sresources-terraform-manifests
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-public"
   }  
 }  
@@ -195,13 +195,13 @@ data "terraform_remote_state" "gke" {
 cd 15-GKE-Private-Standard-Cluster-private-endpoint
 
 # Copy files to Bastion VM
-gcloud compute scp --recurse p3-k8sresources-terraform-manifests "hr-dev-bastion-vm:/tmp" --zone "us-central1-a" --tunnel-through-iap --project "gcplearn9"
+gcloud compute scp --recurse p3-k8sresources-terraform-manifests "hr-dev-bastion-vm:/tmp" --zone "us-central1-a" --tunnel-through-iap --project "project-bde3d8d6-f5a0-49e5-964"
 ```
 
 ## Step-10: Connect to Bastion VM and Verify
 ```t
 # Connect to bastion VM
-gcloud compute ssh --zone "us-central1-a" "hr-dev-bastion-vm" --tunnel-through-iap --project "gcplearn9"
+gcloud compute ssh --zone "us-central1-a" "hr-dev-bastion-vm" --tunnel-through-iap --project "project-bde3d8d6-f5a0-49e5-964"
 
 # Verify installed software
 gcloud version
@@ -216,10 +216,10 @@ gcloud config list
 
 # Set Project
 gcloud config set project PROJECT_ID
-gcloud config set project gcplearn9
+gcloud config set project project-bde3d8d6-f5a0-49e5-964
 
 # Configure kubectl cli
-gcloud container clusters get-credentials hr-dev-gke-cluster --region us-central1 --project gcplearn9
+gcloud container clusters get-credentials hr-dev-gke-cluster --region us-central1 --project project-bde3d8d6-f5a0-49e5-964
 
 # List Kubernetes Nodes
 kubectl get nodes
@@ -271,8 +271,8 @@ curl http://<LOAD-BALANCER-IP>
 gcloud compute instances list
 
 ## SSH to GKE Node VM
-gcloud compute ssh --zone "ZONE" "VM-NAME" --internal-ip  --project "gcplearn9"
-gcloud compute ssh --zone "us-central1-b" "gke-hr-dev-gke-clust-hr-dev-linux-nod-50d31441-2s7c" --internal-ip  --project "gcplearn9"
+gcloud compute ssh --zone "ZONE" "VM-NAME" --internal-ip  --project "project-bde3d8d6-f5a0-49e5-964"
+gcloud compute ssh --zone "us-central1-b" "gke-hr-dev-gke-clust-hr-dev-linux-nod-50d31441-2s7c" --internal-ip  --project "project-bde3d8d6-f5a0-49e5-964"
 exit
 ```
 

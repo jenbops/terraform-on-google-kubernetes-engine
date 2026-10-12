@@ -23,7 +23,7 @@ description: Learn to implement DevOps Pipelines for GKE Workloads
 ### Step-02-02: Dev environment in Environments Folder: dev
 1. Copy the **p2-k8sresources-terraform-manifests folder** from previous demo (Section: 25-GKE-Workloads-Custom-Terraform-Modules) and rename folder to dev (envirionments/dev)
 2. **envirionments/dev/c1-versions.tf:** ensure we have the backend block configured as **prefix = "workloads/dev/k8s-myapp1"**
-3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke"`
+3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops`
 ```hcl
 # Terraform Settings Block
 terraform {
@@ -39,14 +39,14 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "workloads/dev/k8s-myapp1"    
   }  
 }
 ```
 3. **terraform.tfvars:** Ensure environment is **environment     = "dev"**
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"
@@ -55,7 +55,7 @@ business_divsion = "hr"
 ### Step-02-03: Prod environment in Environments Folder: prod
 1. Copy the **p2-k8sresources-terraform-manifests folder** from previous demo (Section: 25-GKE-Workloads-Custom-Terraform-Modules) and rename folder to prod (envirionments/prod)
 2. **envirionments/prod/c1-versions.tf:** ensure we have the backend block configured as **prefix = "workloads/prod/k8s-myapp1"**
-3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke"`
+3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops`
 ```hcl
 # Terraform Settings Block
 terraform {
@@ -71,14 +71,14 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "workloads/prod/k8s-myapp1"    
   }  
 }
 ```
 3. **terraform.tfvars:** Ensure environment is **environment  = "prod"**
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"
@@ -256,7 +256,7 @@ git push
 - **Only select repositories:** stacksimplify/terraform-gcp-gke-k8s-devops
 - Click on **Install**
 - Login to Google Cloud and Click on **Authorize Google Cloud Build**
-- **Select project in GCP:** gcplearn9
+- **Select project in GCP:** project-bde3d8d6-f5a0-49e5-964
 
 
 ## Step-07: GCP Cloud Build: Create HOST Connection [OPTIONAL - IF ALREADY EXISTS]
@@ -304,12 +304,12 @@ git push
 ```hcl
 # Dev Environment
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "workloads/dev/k8s-myapp1"    
   }  
 # Prod Environment
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "workloads/prod/k8s-myapp1"    
   }  
 ```

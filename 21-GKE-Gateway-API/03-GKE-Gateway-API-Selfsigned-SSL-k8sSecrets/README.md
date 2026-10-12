@@ -22,7 +22,7 @@ gcloud compute addresses create my-regional-ip1 \
 
 gcloud compute addresses create my-regional-ip1 \
     --region="us-central1" \
-    --project=gcplearn9 \
+    --project=project-bde3d8d6-f5a0-49e5-964 \
     --network-tier="STANDARD"
 
 # List IP Addresss    
@@ -140,7 +140,7 @@ kubectl delete -f p2-regional-k8sresources-yaml
 - Update your Cloud Storage Bucket
 ```t
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/k8s-gateway-regional-demo1"    
   }  
 ```

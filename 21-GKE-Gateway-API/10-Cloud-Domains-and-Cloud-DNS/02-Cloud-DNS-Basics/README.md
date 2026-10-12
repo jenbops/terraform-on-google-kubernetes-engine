@@ -21,7 +21,7 @@
 ```t
 # Set Project
 gcloud config set project PROJECT_ID
-gcloud config set project gcplearn9
+gcloud config set project project-bde3d8d6-f5a0-49e5-964
 
 # Reserve the External Static IP Address 
 gcloud compute addresses create ext-static-ip-for-dns-demo --region=us-central1

@@ -22,7 +22,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "cloudsql/privatedb"
   }  
 }
@@ -75,7 +75,7 @@ variable "cloudsql_database_version" {
 
 ### Step-02-03: terraform.tfvars
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"
@@ -103,7 +103,7 @@ locals {
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private-autopilot"
   }  
 }
@@ -310,7 +310,7 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/ums-webapp-demo1"    
   }  
 }
@@ -349,7 +349,7 @@ variable "business_divsion" {
 ```
 ### Step-03-03: terraform.tfvars
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"
@@ -374,7 +374,7 @@ locals {
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private-autopilot"
   }  
 }
@@ -391,7 +391,7 @@ output "p1_gke_cluster_location" {
 data "terraform_remote_state" "cloudsql" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "cloudsql/privatedb"
   }
 }

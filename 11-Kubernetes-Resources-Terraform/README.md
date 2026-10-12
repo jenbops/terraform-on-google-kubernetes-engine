@@ -33,7 +33,7 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/k8s-demo1"    
   }  
 }
@@ -94,7 +94,7 @@ locals {
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-public"
   }  
 }

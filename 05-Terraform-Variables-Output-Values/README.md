@@ -27,7 +27,7 @@ description: Learn Terraform Input Variables and Output Values on Google Cloud P
 variable "gcp_project" {
   description = "Project in which GCP Resources to be created"
   type = string
-  default = "gcplearn9"
+  default = "project-bde3d8d6-f5a0-49e5-964"
 }
 
 # GCP Region
@@ -72,7 +72,7 @@ resource "google_compute_instance" "myvm" {
 - We can define the variables 
 ```t
 # terraform.tfvars
-gcp_project   = "gcplearn9"
+gcp_project   = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1   = "us-central1"
 machine_type  = "e2-micro"
 

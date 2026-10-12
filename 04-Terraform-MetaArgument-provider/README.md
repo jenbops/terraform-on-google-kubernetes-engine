@@ -21,14 +21,14 @@ terraform {
 
 # Terraform Provider-1: us-central1
 provider "google" {
-  project = "gcplearn9"
+  project = "project-bde3d8d6-f5a0-49e5-964"
   region = "us-central1"
   alias = "us-central1"    
 }
 
 # Terraform Provider-2: europe-west1
 provider "google" {
-  project = "gcplearn9"
+  project = "project-bde3d8d6-f5a0-49e5-964"
   region = "europe-west1"
   alias = "europe-west1"  
 }
@@ -38,7 +38,7 @@ provider "google" {
 ```hcl
 # Resource: VPC
 resource "google_compute_network" "myvpc" {
-  project = "gcplearn9"
+  project = "project-bde3d8d6-f5a0-49e5-964"
   name = "vpc1"
   auto_create_subnetworks = false   
 }

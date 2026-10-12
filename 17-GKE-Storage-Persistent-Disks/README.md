@@ -32,7 +32,7 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/ums-webapp-demo1"    
   }  
 }
@@ -89,7 +89,7 @@ locals {
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private-autopilot"
   }  
 }
@@ -368,7 +368,7 @@ output "ums_loadbalancer_ip" {
 ```
 ## Step-14: terraform.tfvars
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"

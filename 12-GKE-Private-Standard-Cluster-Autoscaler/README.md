@@ -21,7 +21,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private"    
   }
 }
@@ -305,7 +305,7 @@ resource "google_compute_router_nat" "cloud_nat" {
 
 ## Step-13: terraform.tfvars
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 machine_type    = "e2-medium"
 environment     = "dev"
@@ -342,7 +342,7 @@ terraform apply -auto-approve
 
 # Configure kubectl cli
 gcloud container clusters get-credentials CLUSTER_NAME --region REGION --project PROJECT_ID
-gcloud container clusters get-credentials hr-dev-gke-cluster --region us-central1 --project gcplearn9
+gcloud container clusters get-credentials hr-dev-gke-cluster --region us-central1 --project project-bde3d8d6-f5a0-49e5-964
 
 # kubectl version client and server(cluster)
 kubectl version 
@@ -360,7 +360,7 @@ cd p3-k8sresources-terraform-manifests
 
 # Update c1-versions.tf
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/k8s-demo1"    
   }  
 
@@ -369,7 +369,7 @@ cd p3-k8sresources-terraform-manifests
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-public"
   }  
 }  

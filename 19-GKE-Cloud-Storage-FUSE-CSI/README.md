@@ -26,7 +26,7 @@ gcloud container clusters get-credentials hr-dev-gke-cluster-autopilot \
 
 # Get GCP Project Number
 gcloud projects describe my-sample-project --format="get(projectNumber)"
-gcloud projects describe gcplearn9 --format="get(projectNumber)"
+gcloud projects describe project-bde3d8d6-f5a0-49e5-964 --format="get(projectNumber)"
 
 # Get GCP Project ID
 gcloud projects list
@@ -37,7 +37,7 @@ gcloud storage buckets add-iam-policy-binding gs://BUCKET_NAME \
     --role "ROLE_NAME"
 
 gcloud storage buckets add-iam-policy-binding gs://gke-object-storage-102 \
-    --member "principal://iam.googleapis.com/projects/899156651629/locations/global/workloadIdentityPools/gcplearn9.svc.id.goog/subject/ns/mydemo1ns/sa/mydemo1sa" \
+    --member "principal://iam.googleapis.com/projects/899156651629/locations/global/workloadIdentityPools/project-bde3d8d6-f5a0-49e5-964.svc.id.goog/subject/ns/mydemo1ns/sa/mydemo1sa" \
     --role "roles/storage.objectUser"
 
 [OR]    
@@ -46,8 +46,8 @@ gcloud projects add-iam-policy-binding GCS_PROJECT \
     --member "principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/PROJECT_ID.svc.id.goog/subject/ns/NAMESPACE/sa/KSA_NAME" \
     --role "ROLE_NAME"
 
-gcloud projects add-iam-policy-binding gcplearn9 \
-    --member "principal://iam.googleapis.com/projects/899156651629/locations/global/workloadIdentityPools/gcplearn9.svc.id.goog/subject/ns/mydemo1ns/sa/mydemo1sa" \
+gcloud projects add-iam-policy-binding project-bde3d8d6-f5a0-49e5-964 \
+    --member "principal://iam.googleapis.com/projects/899156651629/locations/global/workloadIdentityPools/project-bde3d8d6-f5a0-49e5-964.svc.id.goog/subject/ns/mydemo1ns/sa/mydemo1sa" \
     --role "roles/storage.objectUser"    
 ```
 
@@ -219,7 +219,7 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gcs-fuse-storage-demo"    
   }  
 }
@@ -283,7 +283,7 @@ locals {
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private-autopilot"
   }  
 }
@@ -560,7 +560,7 @@ output "myapp1_loadbalancer_ip" {
 
 ### Step-03-14: terraform.tfvars
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"

@@ -23,7 +23,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private-autopilot"    
   }
 }
@@ -235,7 +235,7 @@ resource "google_compute_router_nat" "cloud_nat" {
 ```
 ### Step-02-08: terraform.tfvars
 ```hcl
-gcp_project     = "gcplearn9"
+gcp_project     = "project-bde3d8d6-f5a0-49e5-964"
 gcp_region1     = "us-central1"
 environment     = "dev"
 business_divsion = "hr"
@@ -266,7 +266,7 @@ terraform apply -auto-approve
 2. GKE Cluster Details
 
 # Configure kubectl cli
-gcloud container clusters get-credentials hr-dev-gke-cluster-autopilot --region us-central1 --project gcplearn9
+gcloud container clusters get-credentials hr-dev-gke-cluster-autopilot --region us-central1 --project project-bde3d8d6-f5a0-49e5-964
 
 # List Kubernetes Nodes
 kubectl get nodes
@@ -295,7 +295,7 @@ terraform {
     }      
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/k8s-demo1"    
   }  
 }
@@ -306,7 +306,7 @@ terraform {
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke"
+    bucket = "terraform-on-gcp-gke-jenbops
     prefix = "dev/gke-cluster-private-autopilot"
   }  
 }
@@ -390,7 +390,7 @@ terraform plan
 terraform apply -auto-approve
 
 # Configure kubectl cli
-gcloud container clusters get-credentials hr-dev-gke-cluster-autopilot --region us-central1 --project gcplearn9
+gcloud container clusters get-credentials hr-dev-gke-cluster-autopilot --region us-central1 --project project-bde3d8d6-f5a0-49e5-964
 
 # List Kubernetes Nodes
 kubectl get nodes
