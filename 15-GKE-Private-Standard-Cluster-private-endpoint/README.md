@@ -24,7 +24,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/gke-cluster-private"    
   }
 }
@@ -177,7 +177,7 @@ cd p3-k8sresources-terraform-manifests
 
 # Update c1-versions.tf
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/k8s-demo1"    
   }  
 
@@ -186,7 +186,7 @@ cd p3-k8sresources-terraform-manifests
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/gke-cluster-public"
   }  
 }  

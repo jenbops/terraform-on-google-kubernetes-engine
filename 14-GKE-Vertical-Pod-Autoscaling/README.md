@@ -122,7 +122,7 @@ kubectl delete vpa myapp1-vpa
 - Update your Cloud Storage Bucket
 ```t
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/k8s-demo1"    
   }  
 ```

@@ -18,7 +18,7 @@ description: Learn to implement DevOps for GKE Terraform Code in GCP
 ### Step-02-02: Dev environment in Environments Folder: dev
 1. Copy the **terraform-manifests folder** from previous demo (Section: 23-GKE-Custom-Terraform-Modules) and rename folder to dev (envirionments/dev)
 2. **envirionments/dev/c1-versions.tf:** ensure we have the backend block configured as **prefix = "dev/gke-cluster"**
-3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops`
+3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops"`
 ```hcl
 # Terraform Settings Block
 terraform {
@@ -30,7 +30,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/gke-cluster"    
   }
 }
@@ -50,7 +50,7 @@ master_ip_range  = "10.3.0.0/28"
 ### Step-02-03: Prod environment in Environments Folder: prod
 1. Copy the **terraform-manifests folder** from previous demo (Section: 23-GKE-Custom-Terraform-Modules) and rename folder to prod (envirionments/prod)
 2. **envirionments/prod/c1-versions.tf:** ensure we have the backend block configured as **prefix = "prod/gke-cluster"**
-3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops`
+3. **Update your bucket name present in your GCP Account:** `bucket = "terraform-on-gcp-gke-jenbops"`
 ```hcl
 # Terraform Settings Block
 terraform {
@@ -62,7 +62,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "prod/gke-cluster"    
   }
 }
@@ -299,12 +299,12 @@ git push
 ```hcl
 # Dev Environment
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/gke-cluster"    
   }
 # Prod Environment
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "prod/gke-cluster"    
   } 
 ```

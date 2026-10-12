@@ -209,7 +209,7 @@ kubectl delete -f p2-regional-k8sresources-yaml
 - Update your Cloud Storage Bucket
 ```t
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/k8s-gateway-regional-demo1"    
   }  
 ```

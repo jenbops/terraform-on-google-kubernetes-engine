@@ -38,7 +38,7 @@ description: Create GCP Application Load Balancer using GKE Kubernetes Gateway A
 - Update your Cloud Storage Bucket
 ```t
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/k8s-gateway-regional-demo1"    
   }  
 ```

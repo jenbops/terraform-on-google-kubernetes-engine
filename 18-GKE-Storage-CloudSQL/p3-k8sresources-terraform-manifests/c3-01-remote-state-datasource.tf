@@ -2,7 +2,7 @@
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "dev/gke-cluster-private-autopilot"
   }  
 }
@@ -20,7 +20,7 @@ output "p1_gke_cluster_location" {
 data "terraform_remote_state" "cloudsql" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke-jenbops
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "cloudsql/privatedb"
   }
 }
