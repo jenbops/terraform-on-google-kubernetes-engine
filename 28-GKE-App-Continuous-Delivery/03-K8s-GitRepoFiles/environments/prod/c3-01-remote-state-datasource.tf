@@ -2,7 +2,7 @@
 data "terraform_remote_state" "gke" {
   backend = "gcs"
   config = {
-    bucket = "terraform-on-gcp-gke-jenbops"""
+    bucket = "terraform-on-gcp-gke-jenbops"
     prefix = "prod/gke-cluster"
   }  
 }
