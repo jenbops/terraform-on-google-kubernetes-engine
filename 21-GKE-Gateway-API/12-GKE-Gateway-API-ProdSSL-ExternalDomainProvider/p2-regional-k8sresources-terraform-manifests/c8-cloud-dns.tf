@@ -3,7 +3,7 @@
 ## 2. Your registered domain is configured in Cloud DNS for DNS management
 ## 3. Refer Section-15: Cloud Domains and Cloud DNS for complete understanding
 locals {
-  mydomain = "gkeapp101.devopsincloud.com"
+  mydomain = "gkeapp1.gcp.jenb-ops.dev"
   dns_managed_zone = "devopsincloud-com"
 }
 
