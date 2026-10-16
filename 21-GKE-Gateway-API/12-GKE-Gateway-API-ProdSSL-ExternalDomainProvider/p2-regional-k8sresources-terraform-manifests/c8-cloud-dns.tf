@@ -4,7 +4,7 @@
 ## 3. Refer Section-15: Cloud Domains and Cloud DNS for complete understanding
 locals {
   mydomain = "gkeapp1.gcp.jenb-ops.dev"
-  dns_managed_zone = "jenb-ops-dev"
+  dns_managed_zone = "gcp.jenb-ops-dev"
 }
 
 # Resource: Cloud DNS Record Set for A Record
